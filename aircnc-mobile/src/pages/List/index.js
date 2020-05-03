@@ -5,6 +5,7 @@ import LoggoutButton from '../../components/LoggoutButton';
 import socketio from 'socket.io-client';
 import SpotList from '../../components/SpotList';
 import logo from '../../assets/logo.png';
+import moment from 'moment';
 
 function List() {
   const [techs, setTechs] = useState([]);
@@ -16,8 +17,11 @@ function List() {
       });
 
       socket.on('booking_response', booking => {
+        const date = moment(booking.date).format('DD/MM/YYYY hh:mm A');
+
+        console.log(date);
         Alert.alert(
-          `Sua reversa em ${booking.spot.company} em ${booking.date} foi ${
+          `Sua reversa em ${booking.spot.company} em ${date} } foi ${
             booking.approved ? 'APROVADA' : 'REJEITADA'
           } `,
         );
