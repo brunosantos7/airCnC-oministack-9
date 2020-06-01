@@ -44,8 +44,8 @@ def flipper_post_install(installer)
   end
 end
 
-target 'MyApp' do
-  # Pods for MyApp
+target 'AirCnC' do
+  # Pods for AirCnC
   pod 'FBLazyVector', :path => "../node_modules/react-native/Libraries/FBLazyVector"
   pod 'FBReactNativeSpec', :path => "../node_modules/react-native/Libraries/FBReactNativeSpec"
   pod 'RCTRequired', :path => "../node_modules/react-native/Libraries/RCTRequired"
@@ -77,7 +77,7 @@ target 'MyApp' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
-  target 'MyAppTests' do
+  target 'AirCnCTests' do
     inherit! :complete
     # Pods for testing
   end
@@ -94,10 +94,10 @@ target 'MyApp' do
   end
 end
 
-target 'MyApp-tvOS' do
-  # Pods for MyApp-tvOS
+target 'AirCnC-tvOS' do
+  # Pods for AirCnC-tvOS
 
-  target 'MyApp-tvOSTests' do
+  target 'AirCnC-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end
